@@ -15,6 +15,7 @@ To run this game, you'll need Python installed on your system. The game uses the
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/tusharharyana/Snake-s-Den-Game.git 
+   cd Snake-s-Den-Game
 2. Make sure you have Python installed. You can download it from [python.org](https://www.python.org/).
 
 3. Run the game:
