@@ -1,7 +1,6 @@
 from turtle import Turtle
 #Turtle library for graphics.
 
-
 #Setting starting position of snake.
 STARTING_POSITION = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
@@ -20,11 +19,18 @@ class Snake:
     #Create snake body.   
     def create_snake(self):
         for position in STARTING_POSITION:
-            new_segment = Turtle("square")
-            new_segment.color("white")
+            self.add_new_segment(position,"yellow")
+            
+            
+    def add_new_segment(self,position,color):
+            new_segment = Turtle("circle")
+            new_segment.color(color)
             new_segment.penup()
             new_segment.goto(position)  #: (x,y) are the co-ordinates.
-            self.segments.append(new_segment)
+            self.segments.append(new_segment)    
+            
+    def extend(self,color):
+        self.add_new_segment(self.segments[-1].position(),color)
             
     #Move snake body.        
     def move(self):
